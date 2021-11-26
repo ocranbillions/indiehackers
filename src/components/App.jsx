@@ -6,7 +6,7 @@ const useStyles = createUseStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
-    background: theme.background,
+    background: theme.colors.elephant,
   },
 }));
 

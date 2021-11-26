@@ -5,8 +5,14 @@ import { ThemeProvider } from 'react-jss';
 import './index.css';
 import App from './components/App';
 
+// Used https://chir.ag/projects/name-that-color to determine the names of these colors
 const theme = {
-  background: '#0e2439',
+  colors: {
+    elephant: '#0e2439',
+    rockBlue: '#9cb3c9',
+    amaranth: '#e6375a',
+    white: '#FFFFFF',
+  },
 };
 
 ReactDOM.render(
