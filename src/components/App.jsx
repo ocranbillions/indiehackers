@@ -2,6 +2,7 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 
 import Navbar from './Navbar';
+import MeetupsHeader from './MeetupsHeader';
 
 const useStyles = createUseStyles((theme) => ({
   app: {
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <div className={s.app}>
       <Navbar />
+      <MeetupsHeader />
     </div>
   );
 };

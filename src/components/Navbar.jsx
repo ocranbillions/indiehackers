@@ -4,12 +4,14 @@ import clsx from 'clsx';
 
 const useStyles = createUseStyles((theme) => ({
   navbar: {
+    background: 'transparent',
     display: 'flex',
     justifyContent: 'space-between',
     width: '1000px',
     marginTop: 5,
     margin: '0px auto',
     maxWidth: 'calc(100% - 32px)',
+    zIndex: 1,
     '& *': {
       color: theme.colors.white,
     },
@@ -99,7 +101,9 @@ const useStyles = createUseStyles((theme) => ({
   },
   '@media only screen and (max-width: 500px)': {
     navbar: {
-      borderBottom: '1px solid red', // TODO
+      background: theme.colors.elephant,
+      maxWidth: '100%',
+      padding: '0px 16px',
     },
     navbarLogo: {
       display: 'none',

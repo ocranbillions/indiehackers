@@ -13,6 +13,9 @@ const theme = {
     amaranth: '#e6375a',
     white: '#FFFFFF',
     blueDianne: '#26425f',
+    cloudBurst: '#1f364d',
+    periwinkleGray: '#B6CCE2',
+    pictonBlue: '#4799eb'
   },
 };
 
