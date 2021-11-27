@@ -19,7 +19,7 @@ const theme = {
     rhino: '#274059',
     firefly: '#0c1f31',
     thundora: '#404040',
-    baliHai: '#809ab3'
+    baliHai: '#809ab3',
   },
 };
 

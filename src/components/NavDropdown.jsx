@@ -1,5 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import PropTypes from 'prop-types';
 
 const useStyles = createUseStyles(() => ({
   dropdownContainer: {
@@ -61,6 +62,10 @@ const NavDropdown = (props) => {
       </a>
     </div>
   );
+};
+
+NavDropdown.propTypes = {
+  closeDropdown: PropTypes.func.isRequired,
 };
 
 export default NavDropdown;
