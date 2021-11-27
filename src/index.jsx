@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'react-jss';
 
 import './index.css';
-import App from './components/App';
+import App from './App';
 
 // Used https://chir.ag/projects/name-that-color to determine the names of these colors
 const theme = {

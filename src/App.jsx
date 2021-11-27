@@ -1,9 +1,9 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
-import Navbar from './Navbar';
-import MeetupsHeader from './MeetupsHeader';
-import MeetupsList from './MeetupsList';
+import Navbar from './components/Navbar';
+import MeetupsHeader from './components/MeetupsHeader';
+import MeetupsList from './components/MeetupsList';
 
 const useStyles = createUseStyles((theme) => ({
   app: {
