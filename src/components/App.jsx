@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss';
 
 import Navbar from './Navbar';
 import MeetupsHeader from './MeetupsHeader';
-import MeetupsContainer from './MeetupsContainer';
+import MeetupsList from './MeetupsList';
 
 const useStyles = createUseStyles((theme) => ({
   app: {
@@ -22,7 +22,7 @@ const App = () => {
     <div className={s.app}>
       <Navbar />
       <MeetupsHeader />
-      <MeetupsContainer />
+      <MeetupsList />
     </div>
   );
 };

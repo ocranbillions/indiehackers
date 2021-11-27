@@ -4,7 +4,7 @@ import { createUseStyles } from 'react-jss';
 import MeetupItem from './MeetupItem';
 
 const useStyles = createUseStyles(() => ({
-  meetupsContainer: {
+  meetupsListContainer: {
     marginLeft: 'auto',
     marginRight: 'auto',
     marginTop: 64,
@@ -12,20 +12,20 @@ const useStyles = createUseStyles(() => ({
 
   // Mobile
   '@media only screen and (max-width: 600px)': {
-    meetupsContainer: {
+    meetupsListContainer: {
       maxWidth: 'calc(100% - 32px)',
     },
   },
 }));
 
-const MeetupsContainer = () => {
+const MeetupsList = () => {
   const s = useStyles();
 
   return (
-    <div className={s.meetupsContainer}>
+    <div className={s.meetupsListContainer}>
       {[0, 1, 2, 3].map((index) => <MeetupItem key={index} />)}
     </div>
   );
 };
 
-export default MeetupsContainer;
+export default MeetupsList;
