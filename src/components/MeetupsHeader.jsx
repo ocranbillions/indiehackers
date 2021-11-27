@@ -2,6 +2,8 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import clsx from 'clsx';
 
+import ArrowRight from '../icons/ArrowRight';
+
 const useStyles = createUseStyles((theme) => ({
   meetupsHeader: {
     textAlign: 'center',
@@ -55,6 +57,12 @@ const useStyles = createUseStyles((theme) => ({
   arrowIcon: {
     position: 'absolute',
     right: -35,
+    height: 18,
+    color: theme.colors.pictonBlue,
+    '&:hover': {
+      color: theme.colors.amaranth,
+      cursor: 'pointer',
+    },
   },
 
   // Mobile
@@ -91,7 +99,9 @@ const MeetupsHeader = () => {
         </a>
         <a href="*" className={clsx(s.meetupHeaderAction, s.meetupHeaderActionTwo)}>
           <span>Host a Meetup</span>
-          <span className={s.arrowIcon}>AR</span>
+          <span className={s.arrowIcon}>
+            <ArrowRight height="18" width="18" />
+          </span>
         </a>
       </div>
     </div>

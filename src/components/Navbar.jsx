@@ -3,6 +3,10 @@ import { createUseStyles } from 'react-jss';
 import clsx from 'clsx';
 
 import NavDropdown from './NavDropdown';
+import HamburgerMenuIcon from '../icons/Hamburger';
+import SearchIcon from '../icons/SearchIcon';
+import IndieHackerSquareIcon from '../icons/IndieHackerSquareIcon';
+import IndieHackerTextIcon from '../icons/IndieHackerTextIcon';
 
 const useStyles = createUseStyles((theme) => ({
   navbar: {
@@ -15,9 +19,6 @@ const useStyles = createUseStyles((theme) => ({
     margin: '0px auto',
     maxWidth: 'calc(100% - 32px)',
     zIndex: 1,
-    '& *': {
-      color: theme.colors.white,
-    },
   },
   nav: {
     flex: 2,
@@ -55,12 +56,17 @@ const useStyles = createUseStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     textDecoration: 'none',
+    color: theme.colors.white,
+    '& svg:nth-child(1)': {
+      marginRight: 10,
+    },
   },
   authButtonsContainer: {
     flex: 2,
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',
+    color: theme.colors.white,
   },
   authButton: {
     marginLeft: 12,
@@ -70,6 +76,7 @@ const useStyles = createUseStyles((theme) => ({
     fontSize: 14,
     fontWeight: 600,
     textTransform: 'uppercase',
+    color: theme.colors.white,
     '&:nth-child(2)': {
       boxShadow: `inset 0 0 0 3px ${theme.colors.blueDianne}`,
     },
@@ -79,6 +86,13 @@ const useStyles = createUseStyles((theme) => ({
     '&:hover': {
       boxShadow: 'none',
       backgroundImage: 'linear-gradient(to right,#3ec7e0,#526bf4)',
+    },
+  },
+  svgIcon: {
+    color: theme.colors.rockBlue,
+    '&:hover': {
+      color: theme.colors.white,
+      cursor: 'pointer',
     },
   },
 
@@ -108,6 +122,9 @@ const useStyles = createUseStyles((theme) => ({
       maxWidth: '100%',
       padding: '0px 16px',
     },
+    nav: {
+      alignItems: 'center',
+    },
     navbarLogo: {
       display: 'none',
     },
@@ -134,16 +151,22 @@ const Navbar = () => {
     <div className={s.navbar}>
       <ul className={s.nav}>
         <li className={clsx(s.navItem, s.hiddenAbove500)}>
-          <span className={s.navItemLabel}>IH</span>
+          <span className={s.navItemLabel}>
+            <IndieHackerSquareIcon height={24} width={24} />
+          </span>
         </li>
         <li
           className={s.navItem}
           onMouseEnter={() => setOpenDropdown(true)}
         >
-          <span className={s.navItemLabel}>HMB</span>
+          <span className={clsx(s.navItemLabel, s.svgIcon)}>
+            <HamburgerMenuIcon height={18} width={15} />
+          </span>
         </li>
         <li className={clsx(s.navItem, s.displayBelow900)}>
-          <span className={s.navItemLabel}>SRC</span>
+          <span className={clsx(s.navItemLabel, s.svgIcon)}>
+            <SearchIcon height={18} width={18} />
+          </span>
         </li>
         <li className={clsx(s.navItem, s.hiddenBelow900)}>
           <span className={s.navItemLabel}>Start Here</span>
@@ -157,11 +180,14 @@ const Navbar = () => {
       </ul>
 
       <a className={s.navbarLogo} href="*">
-        INDIE HACKERS
+        <IndieHackerSquareIcon height={24} width={24} />
+        <IndieHackerTextIcon height={11} width={110} />
       </a>
 
       <div className={s.authButtonsContainer}>
-        <span className={s.hiddenBelow900}>SRC</span>
+        <span className={clsx(s.hiddenBelow900, s.svgIcon)}>
+          <SearchIcon height={18} width={18} />
+        </span>
         <a href="*" className={s.authButton}>Log In</a>
         <a href="*" className={s.authButton}>Sign Up</a>
       </div>
