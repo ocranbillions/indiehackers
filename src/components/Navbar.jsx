@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import clsx from 'clsx';
 
+import NavDropdown from './NavDropdown';
+
 const useStyles = createUseStyles((theme) => ({
   navbar: {
+    position: 'relative',
     background: 'transparent',
     display: 'flex',
     justifyContent: 'space-between',
@@ -124,13 +127,19 @@ const useStyles = createUseStyles((theme) => ({
 
 const Navbar = () => {
   const s = useStyles();
+
+  const [openDropdown, setOpenDropdown] = useState(false);
+
   return (
     <div className={s.navbar}>
       <ul className={s.nav}>
         <li className={clsx(s.navItem, s.hiddenAbove500)}>
           <span className={s.navItemLabel}>IH</span>
         </li>
-        <li className={s.navItem}>
+        <li
+          className={s.navItem}
+          onMouseEnter={() => setOpenDropdown(true)}
+        >
           <span className={s.navItemLabel}>HMB</span>
         </li>
         <li className={clsx(s.navItem, s.displayBelow900)}>
@@ -156,6 +165,7 @@ const Navbar = () => {
         <a href="*" className={s.authButton}>Log In</a>
         <a href="*" className={s.authButton}>Sign Up</a>
       </div>
+      {openDropdown && <NavDropdown closeDropdown={() => setOpenDropdown(false)} />}
     </div>
   );
 };
