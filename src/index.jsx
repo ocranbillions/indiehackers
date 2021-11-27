@@ -15,7 +15,11 @@ const theme = {
     blueDianne: '#26425f',
     cloudBurst: '#1f364d',
     periwinkleGray: '#B6CCE2',
-    pictonBlue: '#4799eb'
+    pictonBlue: '#4799eb',
+    rhino: '#274059',
+    firefly: '#0c1f31',
+    thundora: '#404040',
+    baliHai: '#809ab3'
   },
 };
 
