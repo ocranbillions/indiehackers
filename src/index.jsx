@@ -20,6 +20,7 @@ const theme = {
     firefly: '#0c1f31',
     thundora: '#404040',
     baliHai: '#809ab3',
+    sanJuan: '#2c4763',
   },
 };
 
