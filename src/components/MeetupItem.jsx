@@ -56,6 +56,7 @@ const useStyles = createUseStyles((theme) => ({
     display: 'flex',
     marginTop: 8,
     flexWrap: 'wrap',
+    alignItems: 'center',
     '& *': {
       fontSize: 16,
       color: theme.colors.baliHai,
