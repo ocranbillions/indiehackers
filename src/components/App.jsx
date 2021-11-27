@@ -1,6 +1,8 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
+import Navbar from './Navbar';
+
 const useStyles = createUseStyles((theme) => ({
   app: {
     display: 'flex',
@@ -11,11 +13,11 @@ const useStyles = createUseStyles((theme) => ({
 }));
 
 const App = () => {
-  const classes = useStyles();
+  const s = useStyles();
 
   return (
-    <div className={classes.app}>
-      <div>App here</div>
+    <div className={s.app}>
+      <Navbar />
     </div>
   );
 };

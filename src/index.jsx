@@ -12,6 +12,7 @@ const theme = {
     rockBlue: '#9cb3c9',
     amaranth: '#e6375a',
     white: '#FFFFFF',
+    blueDianne: '#26425f',
   },
 };
 
